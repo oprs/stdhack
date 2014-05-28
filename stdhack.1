@@ -1,0 +1,21 @@
+.TH stdhack 1
+.SH NAME
+stdhack \- A simple wrapper around standard file descriptors
+
+.SH SYNOPSIS
+.B stdhack
+.RB command \ [args\ ...]
+
+.SH DESCRIPTION
+.B stdhack
+simply runs command as a child process, with stdin, stdout and
+stderr redirected through UNIX pipes.
+
+.SH BUGS
+There's no support for pty allocation, as
+.B sthack
+is mostly targeted at running non-interactive executables.
+
+.SH AUTHOR
+This manual page was written by Olivier Piras <git@oprs.eu>.
+

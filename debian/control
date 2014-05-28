@@ -1,0 +1,19 @@
+Source: stdhack
+Section: misc
+Priority: optional
+Maintainer: Olivier Piras <git@oprs.eu>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.5
+Homepage: http://github.com/oprs/stdhack
+
+Package: stdhack
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Simple wrapper for standard input and output
+ stdhack is a simple wrapper around stdin, stdout and stderr.
+ .
+ Some virtualized environments (OpenVZ) don't play well with
+ standard descriptors and chroot (weird "permission denied"
+ errors on /dev/std{in|out|err}).  stdhack provides a quick
+ workaround by forking a child process, and redirecting its
+ standard descriptors through system pipes.
